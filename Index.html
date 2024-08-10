@@ -6,64 +6,77 @@
     <title>Darnell Raymond - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 </head>
 <body>
     <header>
         <nav>
-            <ul>
+            <div class="logo-container">
+                <img src="DR.png" alt="Darnell Raymond Logo" class="logo">
+            </div>
+            <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="hero">
-            <img src="DR.png" alt="Logo">
-            <p>Animator | Motion Graphics Artist | Full Stack Developer | Software Engineer | Graphic Designer</p>
-        </div>
     </header>
 
-    <!-- <section id="photo">
-        <img src="Subject.png" alt="Darnell Raymond" class="profile-photo">
-    </section> -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Hello, I'm Darnell Raymond</h1>
+            <p>Animator | Motion Graphics Artist | Full Stack Developer</p>
+            <a href="#portfolio" class="btn">View My Work</a>
+        </div>
+    </section>
 
-    <section id="about">
+    <section id="about" class="section-light">
         <h2>About Me</h2>
         <p>As a multifaceted professional with extensive experience in full stack development, animation, and graphic design, I bring a unique blend of technical expertise and creative vision to every project. My background spans from software engineering and web development, where I’ve honed skills in JavaScript, Python, React, and Django, to high-impact roles in motion graphics and 3D animation, collaborating with renowned brands like Nestle Health Science and Ogilvy. With a solid foundation in both the technical and artistic realms, I excel in creating visually compelling and technically sound solutions, whether it's building dynamic web applications or designing engaging animations. My passion lies in crafting seamless user experiences and visually stunning content that resonates with audiences across platforms.</p>
     </section>
 
-    <section id="portfolio">
+    <section id="portfolio" class="section-dark">
         <h2>Portfolio</h2>
         <div class="portfolio-grid">
             <div class="portfolio-item">
                 <a href="app-project.html">
-                    <img src="path/to/app-thumbnail.jpg" alt="App Project">
-                    <p>App Project</p>
+                    <img src="Playpulse1.png" alt="App Project">
+                    <div class="overlay">
+                        <div class="text">App Projects</div>
+                    </div>
                 </a>
             </div>
             <div class="portfolio-item">
                 <a href="website-project.html">
-                    <img src="path/to/website-thumbnail.jpg" alt="Website Project">
-                    <p>Website Project</p>
+                    <img src="PokemonMemoryCardGame.png" alt="Website Project">
+                    <div class="overlay">
+                        <div class="text">Website Projects</div>
+                    </div>
                 </a>
             </div>
             <div class="portfolio-item">
                 <a href="animation-project.html">
-                    <img src="Animation.jpg" alt="Animation Project">
-                    <p>Animation Project</p>
+                    <img src="Animation.png" alt="Animation Project">
+                    <div class="overlay">
+                        <div class="text">Animation Projects</div>
+                    </div>
                 </a>
             </div>
             <div class="portfolio-item">
                 <a href="graphic-design-project.html">
-                    <img src="path/to/graphic-design-thumbnail.jpg" alt="Graphic Design Project">
-                    <p>Graphic Design Project</p>
+                    <img src="presentation.png" alt="Graphic Design Project">
+                    <div class="overlay">
+                        <div class="text">Graphic Design Project</div>
+                    </div>
                 </a>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>Email: danimator1@gmail.com</p>
-        <p>Phone: (917)-683-4823</p>
+    <section id="contact" class="section-light">
+        <h2>Contact Me</h2>
+        <p>I'm always open to new opportunities and collaborations. Let's connect!</p>
+        <p>Email: <a href="mailto:danimator1@gmail.com">danimator1@gmail.com</a></p>
+        <p>Phone: <a href="tel:+19176834823">(917)-683-4823</a></p>
         <div class="social-links">
             <a href="https://www.linkedin.com/in/darnell-raymond-36a5aa13/" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-linkedin"></i>
@@ -72,6 +85,9 @@
                 <i class="fab fa-github"></i>
             </a>
         </div>
+    </section>
+
+    <footer>
         <p>&copy; 2024 Darnell Raymond. All rights reserved.</p>
     </footer>
 </body>
