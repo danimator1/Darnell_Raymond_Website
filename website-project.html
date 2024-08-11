@@ -9,6 +9,32 @@
 </head>
 <body class="website-page">
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeBtn = document.querySelector('.close');
+            
+            document.querySelectorAll('.image-container img').forEach(img => {
+                img.addEventListener('click', () => {
+                    lightbox.style.display = 'block';
+                    lightboxImg.src = img.src;
+                });
+            });
+            
+            closeBtn.addEventListener('click', () => {
+                lightbox.style.display = 'none';
+            });
+            
+            window.addEventListener('click', (event) => {
+                if (event.target === lightbox) {
+                    lightbox.style.display = 'none';
+                }
+            });
+        });
+        </script>
+        
+
     <header>
         <nav>
             <div class="logo-container">
@@ -36,7 +62,7 @@
                 <div class="project-details">
                     <div class="project-description">
                         <h2>Pokedex HTML/CSS/JavaScript</h2>
-                        <p>Detailed description of the website project. Include the tools you used, your role, the challenges you faced, and the results.</p>
+                        <p>The Pokedex website, built with HTML, CSS, and JavaScript, provides an interactive and user-friendly way to explore attack information about various Pokémon. Users can easily search, filter, and learn attack moves about their favorite Pokémon, making it a fun and engaging experience for fans.</p>
                     </div>
                     <div class="image-container">
                         <img src="Pokedex.png" alt="Website Project 1 Image">
@@ -49,7 +75,7 @@
                 <div class="project-details">
                     <div class="project-description">
                         <h2>Pokemon Memory Card Game HTML/CSS/JavaScript</h2>
-                        <p>Detailed description of the website project. Include the tools you used, your role, the challenges you faced, and the results.</p>
+                        <p>The Pokémon Memory Card Game, developed using HTML, CSS, and JavaScript, is a fun and interactive web-based game where players match pairs of Pokémon cards. With engaging animations and a simple yet challenging gameplay, it’s perfect for Pokémon fans and memory game enthusiasts alike.</p>
                     </div>
                     <div class="image-container">
                         <img src="PokemonMemoryCardGame.png" alt="Website Project 2 Image">
@@ -65,7 +91,22 @@
     </section>
     
     <footer>
-        <p>&copy; 2024 Darnell Raymond. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/darnell-raymond-36a5aa13/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/danimator1" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <p class="footer-copyright">&copy; 2024 Darnell Raymond. All rights reserved.</p>
+        </div>
     </footer>
+        <!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+</div>
 </body>
 </html>

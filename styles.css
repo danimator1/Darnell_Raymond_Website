@@ -4,17 +4,32 @@ body {
     color: #333;
     background-color: #f0f0f0;
     margin: 0;
-    padding: 0;
+    padding: 0 0 70px 0; /* Add padding to the bottom */
     line-height: 1.6;
 }
 
 header {
-    background-color: #0e0e0e; /* Same color as the logo */
+    background-color: #0e0e0e; 
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-container {
+    flex: 1; 
+}
+
+.logo {
+    max-width: 100px;
 }
 
 .nav-links {
@@ -35,9 +50,6 @@ header {
     color: #ff6347;
 }
 
-.logo-container .logo {
-    max-width: 100px;
-}
 
 .hero {
     background: linear-gradient(to bottom right, #333, #0e0e0e),
@@ -174,7 +186,7 @@ p {
 }
 
 footer {
-    background-color: #0e0e0e; /* Same color as the logo */
+    background-color: #0e0e0e; 
     color: #777;
     text-align: center;
     padding: 20px;
@@ -183,6 +195,35 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #ff6347;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ff4500;
+}
+
+.footer-copyright {
+    margin: 0;
+}
+
 
 .social-links {
     display: flex;
@@ -258,11 +299,11 @@ footer {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Responsive Video Styling */
+
 .video-container::before {
     content: '';
     display: block;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    padding-top: 56.25%; 
 }
 
 .video-container video {
@@ -274,7 +315,7 @@ footer {
     border-radius: 10px;
 }
 
-/* Hover Effect for Video Container */
+
 .video-container:hover {
     transform: scale(1.05);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
@@ -309,15 +350,52 @@ footer {
 /* Adjusted Image Container Styling */
 .image-container {
     flex: 1;
-    max-width: 400px; /* Set a max-width for the container */
-    margin: 0 auto;   /* Center the image container */
-    padding: 10px;    /* Optional padding for spacing */
+    max-width: 400px;
+    margin: 0 auto;   
+    padding: 10px;   
 }
 
 .image-container img {
-    width: 100%;     /* Make sure the image takes up the full width of the container */
-    height: auto;    /* Maintain the aspect ratio */
-    border-radius: 10px; /* Optional: Keep the rounded corners */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Optional: Keep the shadow effect */
+    width: 100%;     
+    height: auto;   
+    border-radius: 10px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
+
+
+/* Lightbox Styles */
+.lightbox {
+    display: none; 
+    position: fixed; 
+    z-index: 999; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.8); 
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}

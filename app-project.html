@@ -9,6 +9,32 @@
 </head>
 <body class="app-page">
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeBtn = document.querySelector('.close');
+            
+            document.querySelectorAll('.image-container img').forEach(img => {
+                img.addEventListener('click', () => {
+                    lightbox.style.display = 'block';
+                    lightboxImg.src = img.src;
+                });
+            });
+            
+            closeBtn.addEventListener('click', () => {
+                lightbox.style.display = 'none';
+            });
+            
+            window.addEventListener('click', (event) => {
+                if (event.target === lightbox) {
+                    lightbox.style.display = 'none';
+                }
+            });
+        });
+        </script>
+        
+
     <header>
         <nav>
             <div class="logo-container">
@@ -36,7 +62,7 @@
                 <div class="project-details">
                     <div class="project-description">
                         <h2>Playpulse App - Django DB/ Python/React</h2>
-                        <p>Detailed description of the app project. Include the tools you used, your role, the challenges you faced, and the results.</p>
+                        <p>Playpulse is an app I developed using Django, React, Bootstrap, and Python, designed for NFL enthusiasts. It allows users to explore detailed NFL team information, add comments or stats under player profiles, and stay updated with the latest NFL player news, all in one streamlined platform.</p>
                     </div>
                     <div class="image-container">
                         <img src="Playpulse1.png" alt="App Project 1 Image">
@@ -52,7 +78,7 @@
                 <div class="project-details">
                     <div class="project-description">
                         <h2>Tickit - Django DB/ Python/React</h2>
-                        <p>Detailed description of the app project. Include the tools you used, your role, the challenges you faced, and the results.</p>
+                        <p>Tickit is a app that enables users to search for events in any location and purchase tickets seamlessly. In this remote collabrative group project, I played a key role in setting up the database and developing the front end using Django, React, Python, and Bootstrap, ensuring a smooth and responsive user experience.</p>
                     </div>
                     <div class="image-container">
                         <img src="tickit.png" alt="App Project 2 Image">
@@ -68,7 +94,7 @@
                  <div class="project-details">
                     <div class="project-description">
                         <h2>ClickFlix - HTML/CSS/JavaScript/React</h2>
-                        <p>Detailed description of the app project. Include the tools you used, your role, the challenges you faced, and the results.</p>
+                        <p>ClickFlix is a streaming app where users can watch free YouTube movies and get detailed descriptions of the actors featured in them. Built with Express, Node, Mongoose DB and React, the app offers a seamless browsing experience, allowing users to easily discover and enjoy movies while learning more about their favorite actors.</p>
                     </div>
                     <div class="image-container">
                         <img src="ClickFlix.png" alt="App Project 2 Image">
@@ -85,7 +111,7 @@
                 <div class="project-details">
                     <div class="project-description">
                         <h2>Linkup - HTML/CSS/JavaScript/React</h2>
-                        <p>Detailed description of the app project. Include the tools you used, your role, the challenges you faced, and the results.</p>
+                        <p>This messaging app, developed as part of a remote group project, allows users to post and exchange messages between friends. Built using Express, Node.js, Mongoose DB, and React, the app features real-time communication and a user-friendly interface, ensuring smooth and efficient interactions among users.</p>
                     </div>
                     <div class="image-container">
                         <img src="messingapp.png" alt="App Project 2 Image">
@@ -100,7 +126,22 @@
     </section>
     
     <footer>
-        <p>&copy; 2024 Darnell Raymond. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/darnell-raymond-36a5aa13/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/danimator1" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <p class="footer-copyright">&copy; 2024 Darnell Raymond. All rights reserved.</p>
+        </div>
     </footer>
+        <!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+</div>
 </body>
 </html>
