@@ -52,8 +52,7 @@ nav {
 
 
 .hero {
-    background: linear-gradient(to bottom right, #333, #0e0e0e),
-                url('hero-background.jpg') no-repeat center center/cover;
+    background: linear-gradient(to bottom right, #333, #0e0e0e);
     color: white;
     height: 100vh;
     display: flex;
@@ -62,6 +61,7 @@ nav {
     text-align: center;
     position: relative;
 }
+
 
 .hero h1 {
     font-size: 3.5em;
